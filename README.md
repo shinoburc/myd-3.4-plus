@@ -1,5 +1,7 @@
 ![myd](myd.png)
 
+myd-3.4-plus Japanse official site is here[http://dandydot.dyndns.org/software].
+
 # MyD
 
 MyD is very powerful and useful CUI base dictionaly tool by Copyright (C) 2000-2001 Hironori FUJII.
@@ -14,6 +16,7 @@ FEATURES
 # myd-3.4-plus
 
 myd-3.4-plus is a few extension of MyD.
+
 
   MyD's X Window Selection FEATURE is very very useful.
   But not in X Window environment that FEATURE is not work and still require X Window libraries.
