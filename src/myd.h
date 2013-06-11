@@ -29,3 +29,7 @@ char* myd_text(MYD m, int index);
  * 項目数を返します
  */
 int myd_n_index(MYD m);
+
+/* for print random 1 line (-1 option) */
+#define BUFFER_SIZE (16 * 1024)
+void print_random(char *filename);

@@ -45,6 +45,7 @@ void usage(char *prog){
 	 " options\n"
 	 "     [-d <dic_filename>]\n"
 	 "     [-t <theme_no>] select a theme\n"
+	 "     [-1] print random one dictionary and exit.\n"
 	 "     [-h] print the help\n"
 	 "     [-v] print the version\n"
 	 , prog);
@@ -319,6 +320,7 @@ int main(int argc, char *argv[]){
   char dic_filename[1024];
   struct stat st;
   int update_interval = 300; /* milli second */
+  int is_print_random = 0;
 
   snprintf(dic_filename, sizeof(dic_filename), "%s%s%s",
 	  getenv("HOME"), "/", HOME_DIC_FILENAME);
@@ -328,7 +330,7 @@ int main(int argc, char *argv[]){
 
   while(1){
     int c;
-    c = getopt(argc, argv, "d:t:hvi:");
+    c = getopt(argc, argv, "d:t:1hvi:");
     if(c == -1)
       break;
     switch(c){
@@ -344,6 +346,9 @@ int main(int argc, char *argv[]){
       update_interval = atoi(optarg);
       break;
 
+    case '1':
+      is_print_random = 1;
+      break;
     case 'h':
       usage(argv[0]);
     case 'v':
@@ -353,6 +358,11 @@ int main(int argc, char *argv[]){
     case '?':
       exit(1);
     }
+  }
+
+  if(is_print_random){
+    print_random(dic_filename);
+    exit(0);
   }
 
   myd = myd_open(dic_filename);

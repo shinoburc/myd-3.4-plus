@@ -326,3 +326,44 @@ int myd_bsearch(MYD m, char *word, int *index){
 
   return l - f;
 }
+
+void print_random(char *filename){
+  FILE *fp;
+  int fd;
+  int lines = 0;
+  int max, random_line_number;
+  size_t bytes_read;
+  char buf[BUFFER_SIZE + 1];
+
+  fd = open(filename, 0);
+  while((bytes_read = read(fd, buf, BUFFER_SIZE)) > 0) {
+    char *p = buf;
+    while((p = memchr(p, '\n', (buf + bytes_read) - p))) {
+      ++p;
+      ++lines;
+    }
+  }
+  close(fd);
+
+  srand((unsigned) time(NULL));
+  random_line_number = rand() % lines;
+
+  if(random_line_number % 2 == 1) random_line_number -= 1;
+
+  fp = fopen(filename, "rb");
+
+  for ( max = 0 ; !feof(fp) ; max++ ){
+    fgets( buf, sizeof(buf), fp );
+    if(max == random_line_number){
+      buf[strlen(buf) - 2] = '\0';
+      fprintf(stdout,"%s : ",buf);
+
+      fgets( buf, sizeof(buf), fp );
+      buf[strlen(buf) - 2] = '\0';
+      fprintf(stdout,"%s\n",buf);
+      break;
+    }
+  }
+
+  fclose(fp);
+}
