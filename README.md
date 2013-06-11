@@ -13,11 +13,11 @@ FEATURES
 
 myd-3.4-plus is a few extension of MyD.
 
-**MyD's X Window Selection FEATURE is very very useful.
-  But in not in X Window environment that FEATURE is not work and still require X Window libraries.
+  MyD's X Window Selection FEATURE is very very useful.
+  But not in X Window environment that FEATURE is not work and still require X Window libraries.
   So, myd-3.4-plus provide configure option that disable X Window FEATURE.
 
-**myd-3.4-plus provide '-1' command line option.
+  myd-3.4-plus provide '-1' command line option.
   execute "$ myd -1" that will output a line and exit.
   This option is useful for output dictionaly result every command prompt.
 
@@ -60,8 +60,8 @@ FEATURES
 
 ## Getting Started
 
-    ~~~ sh
-    $ myd
-    or
-    $ myd -1
-    ~~~
+  ~~~ sh
+  $ myd
+  or
+  $ myd -1
+  ~~~
