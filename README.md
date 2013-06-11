@@ -2,7 +2,7 @@
 
 # MyD
 
-MyD is very powerful and useful CUI base dictionaly tool.
+MyD is very powerful and useful CUI base dictionaly tool by Copyright (C) 2000-2001 Hironori FUJII.
 
 FEATURES
  * support X Window Selection (you can input search word use double click on kterm or emacs or more.)
