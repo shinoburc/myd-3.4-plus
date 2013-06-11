@@ -16,7 +16,10 @@
 #include "myd.h"
 #include "edit.h"
 #include "term.h"
+
+#ifdef USE_XSELECTION
 #include "getsel.h"
+#endif
 
 #define PROGRAM "MyD"
 
@@ -175,7 +178,9 @@ void main_loop(){
   int n_match;
   int scroll = 0;
 
+#ifdef USE_XSELECTION
   cs = check_sel();
+#endif
   if(cs)
     edit_set_text(cs);
 
@@ -281,7 +286,9 @@ void main_loop(){
 	return;
 	
       case ERR: /* timeout */
+#ifdef USE_XSELECTION
 	cs = check_sel();
+#endif
 	if(cs){
 	  edit_set_text(cs);
 	  n_match = myd_bsearch(myd, edit.text, &index);
@@ -300,7 +307,9 @@ void main_loop(){
 }
 
 void finish(int s){
+#ifdef USE_XSELECTION
   get_sel_end();
+#endif
   term_end();
   myd_close(myd);
   exit(s);
@@ -354,7 +363,9 @@ int main(int argc, char *argv[]){
 
   term_init();
   term_timeout(update_interval);
+#ifdef USE_XSELECTION
   get_sel_init(getenv("DISPLAY"));
+#endif
 
   main_loop();
 

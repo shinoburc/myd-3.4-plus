@@ -3,6 +3,15 @@ AC_INIT(src/myd.c)
 AM_INIT_AUTOMAKE(myd, 3.4)
 AM_CONFIG_HEADER(config.h)
 
+AC_ARG_ENABLE(x_window_selection,
+  [  --disable-x-window-selection              disable X Window Selection],,
+  [enable_x_window_selection="yes"])
+AC_MSG_RESULT($enable_x_window_selection)
+AS_IF([test "x$enable_x_window_selection" != xno],
+  [AC_DEFINE([USE_XSELECTION], [1], [X Window Selection support])]
+)
+AM_CONDITIONAL(USE_XSELECTION, test "x$enable_x_window_selection" != xno)
+
 dnl Checks for programs.
 AC_PROG_CC
 AC_PROG_INSTALL
@@ -27,6 +36,5 @@ AC_DEFINE(HOME_DIC_FILENAME, ".myd/dict.txt")
 AC_DEFINE(SYSTEM_DIC_PATH, PKGDATADIR "/dict.txt")
 
 AC_DEFINE(DEFAULT_THEME, 0)
-
 
 AC_OUTPUT(Makefile src/Makefile)
