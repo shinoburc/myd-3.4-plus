@@ -1,0 +1,36 @@
+[動作確認]
+
+   Vine 2.1 / Linux 2.2
+   IRIX 6.5
+   SunOS 5.6
+
+[INSTALL]
+
+   ./configure --help   # 推奨
+   ./configure
+   emacs config.h       # 推奨
+   make
+   make install
+
+[辞書データのインストール]
+
+   辞書データには、GENE一般英和辞書(以下、GENE)を使うことをおすすめします。
+   GENE は窓の杜から取ってきましょう。
+   GENEの文字コードはシフトJIS(MS漢字コード)なので、
+   MyD で使用するには、文字コードを EUC-jp に変換します。
+   GENE のファイルを gene.txt とすると、
+
+   $ mkdir ~/.myd
+   $ nkf -de < gene.txt > ~/.myd/dict.txt
+
+   ホームディレクトリに .myd ディレクトリを作成し、
+   nkf で文字コードをシフトJISから EUC-jp に変換し、
+   dict.txt というファイル名で保存します。
+
+   MyD は tsv形式の辞書にも対応しています。
+   tsvとは、英単語と訳が1行でタブにより区切られているものです。
+   そして、同梱の pdic2tsv.sh により変換できます。
+   
+   $ nkf -de < gene.txt | ./pdic2tsv.sh | sort -f > ~/.myd/dict.txt
+
+   tsv形式にしておけば、grep や look からも使用できます。

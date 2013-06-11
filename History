@@ -1,0 +1,57 @@
+3.4
+	0.5ミリ秒毎に セレクションにアクセスしていたのを0.3秒毎に。
+	display_mean(), display_word() の修正
+	-i オプションの追加
+
+3.3
+	関数の引数、戻り値の見直し
+	~/.myd.dic -> ~/.myd/dict.txt
+	tsv形式に対応
+	プロンプトを上に移動、ステータスラインを下に追加
+	pdic2tsv.sh を追加
+	GPL。COPYINGの変更。
+
+3.2
+	myd_search()の修正
+
+3.1
+	キーバインド C-t 矢印キー PageUp PageDown を追加
+	大域変数の削減
+	edit.c edit.h 追加
+	(term.c, console.c)-> term.c
+	README にキーバインドとコマンドラインオプションの説明を追加
+	2分探索の修正
+
+3.0
+	ncurses の非使用
+	setvbuf() を使用
+	term.c 追加
+	console.c 追加
+	getopt_long() -> getopt()
+	XNextEvent() -> XCheckTypedEvent()
+  	   XNextEvent()は返って来ないときがあるため
+	term_init() のRaw Mode設定をデバッグ
+	get_sel_init() -> get_sel_init(char *)
+
+2.5
+	check_sel_format(char*)追加
+	大量のコンパイル警告を無くす
+	History 追加
+
+2.4
+	get_sel() -> get_sel(char*,int)
+	終了するキー ^X
+	
+2.3
+	外観の変更
+
+2.2
+	autoconf & automake を採用
+
+2.1
+	get_sel を Xt から X11使用へ
+
+2.0
+	セレクション対応
+
+1.0

@@ -1,0 +1,68 @@
+
+ MyD  
+
+  セレクション対応辞書検索ツール
+  kterm や emacs で英単語をダブルクリックすれば検索されるので、
+  入力の手間いらず。
+
+[特徴]
+  ・kterm や emacs で英単語をダブルクリックすると検索される。
+  ・インクリメンタルサーチ
+  ・二分探索による高速検索
+  ・大文字小文字を区別しない。
+  ・emacs風キーバインド
+
+[原理]
+  kterm や emacs は英単語上でダブルクリックすると、
+  その単語がセレクション(Windowsでいうクリップボード)に
+  コピーされます。MyD はセレクションを常に監視し
+  セレクションの単語を検索、表示するのです。
+  また、英単語をドラッグで選択してもセレクションにコピーされます。
+
+[コマンドラインオプション]
+    myd [-d <dic_filename>] [-t <theme_no>] [-i <milli_sec>]
+       -d dic_filename  辞書ファイルの指定
+           dic_filename はファイル名
+       -t theme_no テーマ番号を指定
+          theme_no は0から2
+       -i mill_sec セレクションにアクセスする時間間隔
+          ミリ秒で指定
+
+    myd -h  
+        print the help
+
+    myd -v 
+        print the version
+
+[キーバインド]
+  C-a		カーソルを先頭へ
+  C-e		カーソルを末尾へ
+  C-f, Right	カーソルを進める
+  C-b, Left	カーソルを戻す
+  C-d		カーソル上の文字削除
+  C-h, BS	カーソル前の文字削除
+  C-k		カーソル以後の削除
+  C-u, C-m, C-j, Enter	全削除
+  C-t		カーソルの前後で文字を置換
+  C-p, PageUp	後退スクロール
+  C-n, PageDown	前進スクロール
+  C-x		終了
+
+[バグ]
+ + バイナリファイルを無理矢理開くとセグメンテーションフォールト
+ + 画面の横幅以上に入力行が長くなると表示がみだれ、予期せぬ動作をする
+ + VT100互換以外で表示が乱れる。例えばemacsのshellモード
+
+[Copyright]
+MyDは GNU GPL です。COPYING ファイルを見て下さい。
+
+[注意]
+  当プログラムにおいて発生したいかなる障害であろうとも、
+  当方では一切の責任を負いません。全て自己責任で使用して下さい。
+
+  Copyright (C) 2000-2001 Hironori FUJII
+  mailto: e23037@edu.ipc.hiroshima-cu.ac.jp
+  mailto: e23037@cr.info.hiroshima-cu.ac.jp
+  MyD Official Home Page:
+   http://www.edu.ipc.hiroshima-cu.ac.jp
+           /~e23037/prog/myd/
