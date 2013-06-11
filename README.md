@@ -22,11 +22,13 @@ myd-3.4-plus is a few extension of MyD.
   This option is useful for output dictionaly result every command line prompt.
 
 
+  ~~~ sh
   (.zshrc)
   precmd() {
     PROMPT="[`myd -1`]$
   ->"
   }
+  ~~~
 
 FEATURES
  * provide --disable-x-window-selection option in configure script.
