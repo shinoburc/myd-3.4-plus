@@ -1,3 +1,5 @@
+![myd](myd.png)
+
 # MyD
 
 MyD is very powerful and useful CUI base dictionaly tool.
