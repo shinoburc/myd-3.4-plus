@@ -9,7 +9,7 @@ FEATURES
  * incremental search
  * High performance using Binary Search.
  * case-insensitive.
- * emacs bind.
+ * emacs key bind.
 
 # myd-3.4-plus
 
