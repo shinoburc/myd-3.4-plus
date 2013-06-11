@@ -1,6 +1,6 @@
 # MyD
 
-MyD is very powerful and useful CLI dictionaly tool.
+MyD is very powerful and useful CUI base dictionaly tool.
 
 FEATURES
  * support X Window Selection (you can input search word use double click on kterm or emacs or more.)
