@@ -3,7 +3,7 @@
 MyD is very powerful and useful CLI dictionaly tool.
 
 FEATURES
- * support X Window Selection (you can input search word use double click on kterm or emacs or more.
+ * support X Window Selection (you can input search word use double click on kterm or emacs or more.)
  * incremental search
  * High performance using Binary Search.
  * case-insensitive.
@@ -18,8 +18,15 @@ myd-3.4-plus is a few extension of MyD.
   So, myd-3.4-plus provide configure option that disable X Window FEATURE.
 
   myd-3.4-plus provide '-1' command line option.
-  execute "$ myd -1" that will output a line and exit.
-  This option is useful for output dictionaly result every command prompt.
+  execute "$ myd -1" that will random output a line from dictionary and exit.
+  This option is useful for output dictionaly result every command line prompt.
+
+
+  (.zshrc)
+  precmd() {
+    PROMPT="[`myd -1`]$
+  ->"
+  }
 
 FEATURES
  * provide --disable-x-window-selection option in configure script.
