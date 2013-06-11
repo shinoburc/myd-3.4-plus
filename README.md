@@ -1,6 +1,6 @@
 ![myd](myd.png)
 
-myd-3.4-plus Japanse official site is here[http://dandydot.dyndns.org/software].
+myd-3.4-plus Japanse official site is [here](http://dandydot.dyndns.org/software).
 
 # MyD
 
