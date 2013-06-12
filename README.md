@@ -79,3 +79,5 @@ FEATURES
   or
   $ myd -1
   ~~~
+
+Have fun!
