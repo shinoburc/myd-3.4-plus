@@ -66,6 +66,12 @@ FEATURES
 4. Download and install GENE95(http://www.namazu.org/~tsuchiya/sdic/data/gene.html) dictionaly
 
     ~~~ sh
+    $ sh ./install-gene95.sh
+    ~~~
+
+or, following manual install.
+
+    ~~~ sh
     $ wget http://www.namazu.org/~tsuchiya/sdic/data/gene95.tar.bz2
     $ tar jxf gene95.tar.bz2
     $ mkdir ~/.myd (or mkdir /usr/local/share/myd if you install system space.)
