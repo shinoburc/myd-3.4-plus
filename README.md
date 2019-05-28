@@ -42,25 +42,29 @@ FEATURES
 ## install
 
 1. Install Automake
-~~~ sh
+```sh
+$ wget http://www.namazu.org/~tsuchiya/sdic/data/gene95.tar.bz2
 $ sudo apt install automake1.11
-~~~
+```
 2. Check out myd-3.4-plus`.
-~~~ sh
+```sh
+$ wget http://www.namazu.org/~tsuchiya/sdic/data/gene95.tar.bz2
 $ git clone git://github.com/shinoburc/myd-3.4-plus
-~~~
+```
 3. Configure
-~~~ sh
+```sh
+$ wget http://www.namazu.org/~tsuchiya/sdic/data/gene95.tar.bz2
 $ cd myd-3.4-plus
 $ ./configure
 or if you do not use X Window Selection
 $ ./configure --disable-x-window-selection
-~~~
+```
 4. Make install
-~~~ sh
+```sh
+$ wget http://www.namazu.org/~tsuchiya/sdic/data/gene95.tar.bz2
 $ make
 $ sudo make install
-~~~
+```
 5. Download and install GENE95(http://www.namazu.org/~tsuchiya/sdic/data/gene.html) dictionaly
 ```sh
 $ sh ./install-gene95.sh
@@ -73,10 +77,11 @@ $ mkdir ~/.myd (or mkdir /usr/local/share/myd if you install system space.)
 $ nkf -w gene.txt > ~/.myd/dict.txt
 ```
 ## Getting Started
-~~~ sh
+```sh
+$ wget http://www.namazu.org/~tsuchiya/sdic/data/gene95.tar.bz2
 $ myd
 or
 $ myd -1
-~~~
+```
 
 Have fun!
