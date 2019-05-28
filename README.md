@@ -71,9 +71,9 @@ FEATURES
 
 5. Download and install GENE95(http://www.namazu.org/~tsuchiya/sdic/data/gene.html) dictionaly
 
-    ~~~ sh
+    ```sh
     $ sh ./install-gene95.sh
-    ~~~
+    ```
 
 or
 
