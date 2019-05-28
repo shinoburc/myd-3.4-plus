@@ -77,12 +77,12 @@ FEATURES
 
 or
 
-    ~~~ sh
+    ```sh
     $ wget http://www.namazu.org/~tsuchiya/sdic/data/gene95.tar.bz2
     $ tar jxf gene95.tar.bz2
     $ mkdir ~/.myd (or mkdir /usr/local/share/myd if you install system space.)
     $ nkf -w gene.txt > ~/.myd/dict.txt
-    ~~~
+    ```
 
 ## Getting Started
 
