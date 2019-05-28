@@ -41,13 +41,19 @@ FEATURES
 
 ## install
 
-1. Check out myd-3.4-plus`.
+1. Install Automake
+
+    ~~~ sh
+    $ sudo apt install automake1.11
+    ~~~
+
+2. Check out myd-3.4-plus`.
 
     ~~~ sh
     $ git clone git://github.com/shinoburc/myd-3.4-plus
     ~~~
 
-2. Configure
+3. Configure
 
     ~~~ sh
     $ cd myd-3.4-plus
@@ -56,14 +62,14 @@ FEATURES
     $ ./configure --disable-x-window-selection
     ~~~
 
-3. Make install
+4. Make install
 
     ~~~ sh
     $ make
     $ sudo make install
     ~~~
 
-4. Download and install GENE95(http://www.namazu.org/~tsuchiya/sdic/data/gene.html) dictionaly
+5. Download and install GENE95(http://www.namazu.org/~tsuchiya/sdic/data/gene.html) dictionaly
 
     ~~~ sh
     $ sh ./install-gene95.sh
