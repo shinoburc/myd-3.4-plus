@@ -74,7 +74,9 @@ FEATURES
     ~~~ sh
     $ sh ./install-gene95.sh
     ~~~
+
 or
+
     ~~~ sh
     $ wget http://www.namazu.org/~tsuchiya/sdic/data/gene95.tar.bz2
     $ tar jxf gene95.tar.bz2
