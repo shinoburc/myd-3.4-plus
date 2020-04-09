@@ -43,7 +43,7 @@ FEATURES
 
 1. Install Automake
 ```sh
-$ sudo apt install automake1.11
+$ sudo apt install automake1.11 build-essential
 ```
 2. Check out myd-3.4-plus`.
 ```sh
